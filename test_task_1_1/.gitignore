@@ -1,0 +1,6 @@
+/node_modules
+.env
+wget-log
+workspace.code-workspace
+packages_pgadmin_org.pub
+sudo

@@ -1,0 +1,103 @@
+{
+	"info": {
+		"_postman_id": "de60454c-71da-4407-8e38-8c0319d6573d",
+		"name": "test_1_2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23207300"
+	},
+	"item": [
+		{
+			"name": "Get statistic",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3001/api/statistics?action=insert&dateAfter&dateBefore",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"statistics"
+					],
+					"query": [
+						{
+							"key": "shopId",
+							"value": "2",
+							"disabled": true
+						},
+						{
+							"key": "action",
+							"value": "insert"
+						},
+						{
+							"key": "dateAfter",
+							"value": null
+						},
+						{
+							"key": "dateBefore",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Send statistics",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"action\": \"insert\",\n  \"date\": \"2024-11-18T12:42:57.868Z\",\n  \"shop_id\": 4,\n  \"plu\": \"1122\",\n  \"raw_log\": \"string\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3001/api/statistics",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"statistics"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Yellow carrot",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

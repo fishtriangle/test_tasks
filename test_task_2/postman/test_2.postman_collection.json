@@ -1,0 +1,42 @@
+{
+	"info": {
+		"_postman_id": "be3462fa-e0ce-4168-865f-3058ba60f51c",
+		"name": "test_2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23207300"
+	},
+	"item": [
+		{
+			"name": "Patch users",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[10, 11, 12, 13, 14, 15, 16, 17, 18, 19]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3000/api/users",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

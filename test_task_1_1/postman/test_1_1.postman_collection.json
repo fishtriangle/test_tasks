@@ -1,0 +1,345 @@
+{
+	"info": {
+		"_postman_id": "3a79c587-c833-4f1c-adb5-888fa6235d6d",
+		"name": "test_1_1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23207300"
+	},
+	"item": [
+		{
+			"name": "goods",
+			"item": [
+				{
+					"name": "Create good",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"plu\": \"1122\",\n    \"name\": \"White onion\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/api/good",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"good"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get goods",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3000/api/goods?plu=1122",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"goods"
+							],
+							"query": [
+								{
+									"key": "plu",
+									"value": "1122"
+								},
+								{
+									"key": "name",
+									"value": "Yellow carrot",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "shops",
+			"item": [
+				{
+					"name": "Create shop",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Vegetable shop\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/api/shop",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"shop"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all shops",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3000/api/shops",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"shops"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get one shop",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3000/api/shop/helicopter",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"shop",
+								"helicopter"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete one shop",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3000/api/shop/helicopter",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"shop",
+								"helicopter"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "balance",
+			"item": [
+				{
+					"name": "Create balance",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"goodPlu\": \"1122\", \n    \"shopId\": 2,\n    \"shelfQty\": 3,\n    \"orderQty\": 7\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/api/createbalance",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"createbalance"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Increase balance",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"goodPlu\": \"1122\", \n    \"shopId\": 2,\n    \"shelfQty\": 9,\n    \"orderQty\": 11\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/api/increasebalance",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"increasebalance"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Decrease balance",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"goodPlu\": \"57091\", \n    \"shopId\": 3,\n    \"shelfQty\": 6,\n    \"orderQty\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/api/decreasebalance",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"decreasebalance"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get balance",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3000/api/balance",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"balance"
+							],
+							"query": [
+								{
+									"key": "plu",
+									"value": "57091",
+									"disabled": true
+								},
+								{
+									"key": "shopId",
+									"value": "3",
+									"disabled": true
+								},
+								{
+									"key": "minShelfQty",
+									"value": "8",
+									"disabled": true
+								},
+								{
+									"key": "maxShelfQty",
+									"value": "9",
+									"disabled": true
+								},
+								{
+									"key": "minOrderQty",
+									"value": "3",
+									"disabled": true
+								},
+								{
+									"key": "maxOrderQty",
+									"value": "10",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
